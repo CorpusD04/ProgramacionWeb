@@ -1,0 +1,63 @@
+<!-- Documento HTML estándar con idioma español -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Título de la pestaña del navegador -->
+    <title>Gestión de Usuarios</title>
+</head>
+
+<body>
+    <!-- Encabezado principal de la página -->
+    <h1>Lista de Usuarios</h1>
+
+    <!-- Tabla que muestra la lista de usuarios registrados -->
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <!-- Encabezados de columna: ID, Nombre, Email y Acciones -->
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Bucle que recorre la lista de usuarios enviada desde Flask -->
+            {% for user in users %}
+            <tr>
+                <!-- Muestra el ID del usuario (posición 0 en la tupla) -->
+                <td>{{ user[0] }}</td>
+                <!-- Muestra el nombre del usuario (posición 1 en la tupla) -->
+                <td>{{ user[1] }}</td>
+                <!-- Muestra el email del usuario (posición 2 en la tupla) -->
+                <td>{{ user[2] }}</td>
+                <td>
+                    <!-- Enlace para editar el usuario. Redirige a /edit/<id> -->
+                    <a href="/edit/{{ user[0] }}">Editar</a> |
+                    <!-- Enlace para eliminar al usuario. Usa confirmación de JavaScript -->
+                    <a href="/delete/{{ user[0] }}" onclick="return confirm('¿Estás seguro de eliminar este usuario?');">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Formulario para agregar un nuevo usuario -->
+    <h2>Agregar nuevo usuario</h2>
+    <form method="POST" action="/add">
+        <!-- Campo de entrada para el nombre -->
+        <label>Nombre:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <!-- Campo de entrada para el correo electrónico -->
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Agregar Usuario</button>
+    </form>
+</body>
+</html>

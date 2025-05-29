@@ -1,0 +1,35 @@
+<!-- Documento HTML estándar con idioma español -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Título de la pestaña -->
+    <title>Editar Usuario</title>
+</head>
+
+<body>
+    <!-- Encabezado principal -->
+    <h1>Editar Usuario</h1>
+
+    <!-- Formulario para actualizar los datos del usuario -->
+    <!-- Se envía un POST a /update/<id> con los nuevos datos -->
+    <form method="POST" action="/update/{{ user[0] }}">
+        <!-- Campo para el nombre, ya precargado con el nombre actual -->
+        <label>Nombre:</label><br>
+        <input type="text" name="name" value="{{ user[1] }}" required><br><br>
+
+        <!-- Campo para el email, ya precargado con el email actual -->
+        <label>Email:</label><br>
+        <input type="email" name="email" value="{{ user[2] }}" required><br><br>
+
+        <!-- Botón para enviar los cambios -->
+        <button type="submit">Actualizar Usuario</button>
+    </form>
+
+    <!-- Enlace para regresar a la página principal sin hacer cambios -->
+    <br>
+    <a href="/">Cancelar</a>
+</body>
+</html>
