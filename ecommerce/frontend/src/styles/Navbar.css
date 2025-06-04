@@ -1,0 +1,56 @@
+.navbar {
+    background: linear-gradient(to right, #accbe1, #fbc3bc, #c3e0dc, #eae2b7);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 🔹 Separa el título y los botones */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 15px; /* 🔹 Lo empuja a la izquierda */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar button {
+    background: #85a3b2;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar button:hover {
+    background: #6e92a1;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cart-icon {
+    font-size: 20px; /* 🔹 Ajusta el tamaño del icono */
+}
+
+.cart-count {
+    background: red;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-size: 14px;
+    margin-left: 5px;
+}

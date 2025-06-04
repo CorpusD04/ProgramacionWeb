@@ -1,0 +1,28 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-summary {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.clear-btn {
+    background: red;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.checkout-btn {
+    background: green;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}

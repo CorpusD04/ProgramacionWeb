@@ -1,0 +1,16 @@
+.register-btn {
+    background: #85a3b2;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background: #6e92a1;
+    transform: scale(1.05);
+}
