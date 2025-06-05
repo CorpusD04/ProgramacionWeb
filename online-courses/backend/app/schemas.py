@@ -1,52 +1,54 @@
-from pydantic import BaseModel
-from typing import Optional
+# Importa módulos necesarios de Pydantic para validación de datos
+from pydantic import BaseModel  # Base para definir esquemas de datos
+from typing import Optional  # Permite manejar valores opcionales en los atributos
 
-#  Definir esquema para usuarios
+# 🔹 Definir esquema para usuarios
 class UserBase(BaseModel):
-    name: str
-    email: str
+    name: str  # Nombre del usuario
+    email: str  # Email del usuario
 
 class UserCreate(UserBase):
-    password: str  #  Agregar contraseña para registro
+    password: str  # ✅ Se agrega el atributo 'password' para el registro del usuario
 
 class User(UserBase):
-    id: int
+    id: int  # Identificador único del usuario
 
     class Config:
-        orm_mode = True
+        orm_mode = True  # ✅ Permite convertir instancias de SQLAlchemy a modelos Pydantic
 
+# 🔹 Esquema para la salida de cursos con información de progreso
 class CourseOut(BaseModel):
-    id: int
-    title: str
-    description: str
-    completed: bool
+    id: int  # Identificador único del curso
+    title: str  # Título del curso
+    description: str  # Descripción del curso
+    completed: bool  # ✅ Indica si el usuario ha completado el curso
 
-#  Esquema de cursos
+# 🔹 Definir esquema para cursos
 class CourseBase(BaseModel):
-    title: str
-    description: Optional[str]
-    category: Optional[str]
-    url: str
-    provider: Optional[str]
-    image: Optional[str]
+    title: str  # Título del curso
+    description: Optional[str]  # Descripción del curso (puede ser opcional)
+    category: Optional[str]  # Categoría del curso (opcional)
+    url: str  # ✅ URL del curso (enlace externo)
+    provider: Optional[str]  # Plataforma del curso (Udemy, Coursera, etc.) opcional
+    image: Optional[str]  # URL de imagen asociada al curso (opcional)
 
 class CourseCreate(CourseBase):
-    pass
+    pass  # ✅ Hereda de CourseBase sin cambios
 
 class Course(CourseBase):
-    id: int
+    id: int  # Identificador único del curso
 
     class Config:
-        orm_mode = True
+        orm_mode = True  #  Permite convertir instancias de SQLAlchemy a modelos Pydantic
 
-#  Esquema de progreso de usuario en cursos
+# 🔹 Esquema de progreso de usuario en cursos
 class UserCourseBase(BaseModel):
-    course_id: int
+    course_id: int  # Identificador del curso en el que el usuario está inscrito
 
 class UserCourse(UserCourseBase):
-    id: int
-    completed: bool
-    course: Course
+    id: int  # Identificador único del progreso del usuario en el curso
+    completed: bool  #  Indica si el usuario ha completado el curso
+    course: Course  # Relación con el curso al que está inscrito el usuario
 
     class Config:
-        orm_mode = True
+        orm_mode = True  #  Permite la conversión automática de modelos ORM a Pydantic
