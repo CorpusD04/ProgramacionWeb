@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Aprende Python desde cero",
+    "description": "Curso gratuito de Python en español.",
+    "category": "Programación",
+    "provider": "YouTube",
+    "url": "https://www.youtube.com/watch?v=kqtD5dpn9C8"
+  },
+  {
+    "title": "Fundamentos de JavaScript",
+    "description": "Curso de JavaScript moderno.",
+    "category": "Programación",
+    "provider": "FreeCodeCamp",
+    "url": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+  },
+  {
+    "title": "Curso de HTML y CSS",
+    "description": "Diseña sitios web desde cero.",
+    "category": "Diseño Web",
+    "provider": "OpenWebinars",
+    "url": "https://openwebinars.net/cursos/html-css/"
+  }
+]
