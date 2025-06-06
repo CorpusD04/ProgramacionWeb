@@ -1,0 +1,5 @@
+/* Selecciona el elemento <body> del documento */
+body {
+  /* Aplica color azul a todo el texto que se encuentre dentro del body */
+  color: blue;
+}

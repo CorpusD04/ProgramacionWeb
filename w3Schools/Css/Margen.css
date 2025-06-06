@@ -1,0 +1,5 @@
+/* Selecciona un elemento con la clase "container" */
+.container {
+  /* Aplica un margen de 20 píxeles en todos los lados del elemento */
+  margin: 20px;
+}

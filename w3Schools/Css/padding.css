@@ -1,0 +1,5 @@
+/* Selecciona un elemento con la clase "content" */
+.content {
+  /* Agrega 15 píxeles de espacio interno (padding) a todos sus lados */
+  padding: 15px;
+}

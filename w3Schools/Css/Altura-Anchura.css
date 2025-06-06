@@ -1,0 +1,9 @@
+/* Selecciona un elemento con la clase "box" */
+.box {
+  /* Establece la altura del elemento a 150 píxeles */
+  height: 150px;
+  /* Establece la anchura del elemento a 300 píxeles */
+  width: 300px;
+  /* Asigna un color de fondo para visualizar el tamaño del elemento */
+  background-color: #eee;
+}

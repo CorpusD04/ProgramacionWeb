@@ -1,0 +1,5 @@
+/* Selecciona el elemento <body> del documento */
+body {
+  /* Asigna el color lightblue como fondo para todo el documento */
+  background-color: lightblue;
+}

@@ -1,0 +1,5 @@
+/* Selecciona los elementos que usen la clase "p1" */
+.p1 {
+  /* Especifica la familia de fuente, con "Times New Roman" como primera opción */
+  font-family: "Times New Roman", Times, serif;
+}

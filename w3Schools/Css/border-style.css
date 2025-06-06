@@ -1,0 +1,9 @@
+/* Selecciona un elemento con la clase "box" */
+.box {
+  /* Define el estilo del borde como punteado */
+  border-style: dotted;
+  /* Fija el ancho del borde a 2 píxeles */
+  border-width: 2px;
+  /* Establece el color del borde a gris oscuro */
+  border-color: #333;
+}
